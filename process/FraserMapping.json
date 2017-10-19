@@ -5,8 +5,47 @@
                 "_replace_": "__PLEASE_REMOVE_OR_REPLACE__"
             },
             "mdml:map": {
-                "_replace_": "__PLEASE_REMOVE_OR_REPLACE__"
-            },
+            	"mdml:mapVars": {
+                    "viewURL": {
+                    	"map:hasView":{
+                        	"urls":"_path:location.url",
+                            "filter":"fraser.stlouisfed.org"
+                        }
+                    }
+                },
+                "@context": "http://dp.la/api/items/context",
+         		"dataProvider": "Federal Reserve Bank of St. Louis",
+         		"hasView": {
+                	"@id": "_var:viewURL"
+                },
+                "@id": {"map:getSourceURI":{}},
+         		"object": {"@id": "_path:location.url[?mdml:access=='preview'].mdml:_TXT"},
+         		"aggregatedCHO": "#sourceResource",
+         		"@type": "ore:Aggregation",
+         		"ingestDate": {"@id": {"map:currentDateTime":{}}},
+         		"isShownAt": {"@id": "_var:viewURL"},
+         		"provider": {
+                	"@id": "http://dp.la/api/contributor/missouri-hub", 
+                    "name": "Missouri Hub"
+                 },
+                  "sourceResource": {
+                         "publisher": "_path:originInfo.publisher",
+                         "creator": "_path:name[?role.roleTerm=='creator'].namePart",
+                         "contributor": "_path:name[?role.roleTerm=='contributor'].namePart",
+                         "description": "_path:note[0].mdml:_TXT",
+                         "language": "_path:language",
+                         "rights": "_path:accessCondition",
+                         "typeOfResource": "_path:typeOfResource",
+                         "title": "_path:titleInfo",
+                         "date": "_path:originInfo.sortDate",
+                         "dateCreated": "_path:originInfo.sortDate",
+                         "relation": "_path:relatedItem.titleInfo.title",
+                         "stateLocatedIn": "Missouri",
+                         "identifier": "_path:identifier.mdml:_TXT",
+                         "type": "_path:genre.mdml:_TXT",
+                         "ingestType": "item",
+                         "_id": "_var:sourceID"
+                 },
             "mdml:mapPath": "__PLEASE_REMOVE_OR_REPLACE__",
             "mdml:originURI": "_currentOriginURI",
             "mdml:sourceURI": "_currentSourceURI",
