@@ -1,6 +1,7 @@
 # MDML Client SKEL
 
 From mdmlCore/clientSkel.
+This project is intended to run under an mdml/projects directory
 
 # Setup - Linux
 
@@ -8,9 +9,8 @@ From mdmlCore/clientSkel.
 ```
 %>sudo apt-get install git
 ```
-1. Clone or download mdmlCore.
-2. Add the path to mdmlCore/bin to $PATH
-3. Install python 2.7 and pip if not already installed
+1. Clone or download mdml.
+2. Install python 2.7 and pip if not already installed
 4. Use pip to install requests module
 ```
 %>pip install requests
@@ -24,10 +24,9 @@ From mdmlCore/clientSkel.
 # Setup - Windows
 
 0. Install git if not already installed (see https://www.atlassian.com/git/tutorials/install-git#windows)
-1. Clone or download mdmlCore.
-2. Add path to mdmlCore/bin to $PATH using Windows System configuration
-3. Install Python 2.7 (see https://www.python.org/downloads/release/python-2712rc1/)
-4. Install pip:
+1. Clone or download mdml.
+2. Install Python 2.7 (see https://www.python.org/downloads/release/python-2712rc1/)
+3. Install pip:
 ```
 %>python C:\Python27\Scripts\get-pip.py
 ```
